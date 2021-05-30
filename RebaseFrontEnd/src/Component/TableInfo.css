@@ -1,0 +1,11 @@
+.button-download{
+    width: 10%;
+    height: 50px;
+    background-color: #4aa96c;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 5px;
+    margin:2% 0% 2% 0% ;
+    cursor: pointer;
+}
