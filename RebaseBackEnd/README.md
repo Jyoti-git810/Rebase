@@ -4,7 +4,3 @@
 
 #### In order to run the application Type the following command:
 ```npm start```
-
-### To Visit App:
-```http://localhost:3000```
-

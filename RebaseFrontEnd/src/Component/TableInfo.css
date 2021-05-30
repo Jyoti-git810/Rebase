@@ -1,5 +1,5 @@
 .button-download{
-    width: 10%;
+    width: 15%;
     height: 50px;
     background-color: #4aa96c;
     border: none;
@@ -8,4 +8,15 @@
     border-radius: 5px;
     margin:2% 0% 2% 0% ;
     cursor: pointer;
+}
+.spinners{
+    display: flex;
+   color:#4aa96c;
+   font-size: 30px;
+   font-weight: 600;
+   margin:40% 60%;
+   width: 100%;
+}
+.spinners p{
+    width: 100%;
 }

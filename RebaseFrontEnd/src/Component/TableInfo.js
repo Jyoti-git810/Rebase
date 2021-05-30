@@ -1,7 +1,8 @@
 import React from 'react';
 import {Table,TableBody,TableCell, TableContainer,TableHead,TableRow} from '@material-ui/core'
 import ReactHTMLTableToExcel from "react-html-table-to-excel";
-import './TableInfo.css'
+import './TableInfo.css';
+import {ThreeDots,Rings,Bars} from 'svg-loaders-react';
 
  const TableInfo = ({Data}) => {
      const style={
@@ -14,27 +15,27 @@ import './TableInfo.css'
         <div>
              <ReactHTMLTableToExcel
                 table="Stategy"
-                filename="Stategy"
-                sheet="Stategy1"
-                buttonText="EXPORT"
+                filename="Excel"
+                sheet="Sheet"
+                buttonText="EXPORT TO EXCEL"
             />
             <TableContainer>
                 <Table id="Stategy">
                     <TableHead>
                         <TableRow>
-                            <TableCell style={style} align="right">Trade No.</TableCell>
-                            <TableCell style={style} align="right">Lots</TableCell>
-                            <TableCell style={style} align="right">Legs</TableCell>
-                            <TableCell style={style} align="right">Entry Date</TableCell>
-                            <TableCell style={style} align="right">Strike</TableCell>
-                            <TableCell style={style} align="right">B/S</TableCell>
-                            <TableCell style={style} align="right">Options</TableCell>
-                            <TableCell style={style} align="right">Entry Price</TableCell>
-                            <TableCell style={style} align="right">EXIT DATE</TableCell>
-                            <TableCell style={style} align="right">Exit Price</TableCell>
-                            <TableCell style={style} align="right">Days</TableCell>
-                            <TableCell style={style} align="right">Profit</TableCell>
-                            <TableCell style={style} align="right">Total Profit</TableCell>
+                            <TableCell style={style} align="center">Trade No.</TableCell>
+                            <TableCell style={style} align="center">Lots</TableCell>
+                            <TableCell style={style} align="center">Legs</TableCell>
+                            <TableCell style={style} align="center">Entry Date</TableCell>
+                            <TableCell style={style} align="center">Strike</TableCell>
+                            <TableCell style={style} align="center">B/S</TableCell>
+                            <TableCell style={style} align="center">Options</TableCell>
+                            <TableCell style={style} align="center">Entry Price</TableCell>
+                            <TableCell style={style} align="center">EXIT DATE</TableCell>
+                            <TableCell style={style} align="center">Exit Price</TableCell>
+                            <TableCell style={style} align="center">Days</TableCell>
+                            <TableCell style={style} align="center">Profit</TableCell>
+                            <TableCell style={style} align="center">Total Profit</TableCell>
                         </TableRow>
                     </TableHead>
                 <TableBody>
@@ -64,7 +65,11 @@ import './TableInfo.css'
                             </>
                            )
                         })
-                    :null}
+                       
+                    : <div className="spinners">
+                        <p>Data Loading...</p>
+                        <Bars fill="#ffb366" style={{width:"40%"}}/>
+                    </div> }
                 </TableBody>
                 </Table>
             </TableContainer>
